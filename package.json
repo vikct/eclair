@@ -4,9 +4,43 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "build": "webpack -w",
+    "build:prod": "webpack -p",
+    "start": "nodemon dist/index.bundle.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
+    "supertest": "^4.0.2",
+    "webpack": "^4.44.0",
+    "webpack-node-externals": "^2.5.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.5",
+    "forever": "^3.0.0",
+    "global": "^4.4.0",
+    "http-status": "^1.4.2",
+    "joi": "^17.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^2.4.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  }
 }
